@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="base" prefHeight="605.0" prefWidth="1080.0" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bbbaden.buchungstrainer.controller.LoginController">
+   <children>
+      <VBox alignment="TOP_CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <HBox alignment="CENTER" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane>
+                           <children>
+                              <Label id="lblTitle" fx:id="lblTitle" alignment="CENTER" text="Einloggen" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+                                 <font>
+                                    <Font size="48.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <Button id="btnBack" fx:id="btnBack" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#back" prefHeight="50.0" prefWidth="200.0" styleClass="btn-cancel" stylesheets="@../styles/Styles.css" text="Zurück" textAlignment="CENTER" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="25.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane>
+                           <children>
+                              <HBox alignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="10.0">
+                                 <children>
+                                    <Label prefWidth="75.0" text="Email">
+                                       <HBox.margin>
+                                          <Insets left="250.0" right="25.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField id="txtEmail" fx:id="txtEmail" prefHeight="40.0" prefWidth="500.0" promptText="Email">
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin></TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane>
+                           <children>
+                              <HBox alignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="10.0">
+                                 <children>
+                                    <Label prefWidth="75.0" text="Password">
+                                       <HBox.margin>
+                                          <Insets left="250.0" right="25.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <PasswordField id="txtPassword" fx:id="txtPassword" prefHeight="40.0" prefWidth="500.0" promptText="Passwort">
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin></PasswordField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane>
+                           <children>
+                              <HBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                                 <children>
+                                    <Label id="lblRegister" fx:id="lblRegister" alignment="CENTER" onMouseClicked="#register" styleClass="link" stylesheets="@../styles/Styles.css" text="Noch kein Benutzer? Registrieren Sie sich hier!" textFill="#0066cc">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <Label id="lblError" fx:id="lblError" alignment="CENTER" textAlignment="CENTER" textFill="RED">
+                           <VBox.margin>
+                              <Insets bottom="25.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" layoutX="-2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button id="btnLogin" fx:id="btnLogin" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#login" prefHeight="50.0" prefWidth="200.0" styleClass="btn-default" text="Einloggen" textAlignment="CENTER" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

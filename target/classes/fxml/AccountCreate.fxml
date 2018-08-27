@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="base" prefHeight="605.0" prefWidth="1080.0" styleClass="mainFxmlClass" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bbbaden.buchungstrainer.controller.AccountCreateController">
+   <children>
+      <HBox maxHeight="5000.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <VBox alignment="CENTER" prefWidth="4000.0">
+               <children>
+                  <AnchorPane>
+                     <children>
+                        <Button id="btnBack" fx:id="btnCancel" alignment="CENTER" contentDisplay="CENTER" minHeight="50.0" mnemonicParsing="false" onAction="#cancel" prefHeight="50.0" styleClass="btn-cancel" text="Abbrechen" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <ListView id="listAccount" fx:id="listAccount">
+                     <VBox.margin>
+                        <Insets bottom="25.0" top="25.0" />
+                     </VBox.margin>
+                  </ListView>
+                  <AnchorPane>
+                     <VBox.margin>
+                        <Insets bottom="25.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox alignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Button id="btnAdd" fx:id="btnAdd" alignment="CENTER" contentDisplay="CENTER" minHeight="50.0" minWidth="125.0" mnemonicParsing="false" onAction="#add" prefHeight="50.0" styleClass="btn-default" text="Hinzufügen ..." textAlignment="CENTER">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button id="btnDelete" fx:id="btnDelete" alignment="CENTER" contentDisplay="CENTER" disable="true" minHeight="50.0" minWidth="125.0" mnemonicParsing="false" onAction="#delete" prefHeight="50.0" styleClass="btn-delete" text="Löschen" textAlignment="CENTER">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <children>
+                        <Button id="btnNext" fx:id="btnNext" alignment="CENTER" contentDisplay="CENTER" disable="true" minHeight="50.0" mnemonicParsing="false" onAction="#next" prefHeight="50.0" styleClass="btn-default" text="Weiter" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+               <padding>
+                  <Insets right="25.0" />
+               </padding>
+            </VBox>
+            <BorderPane prefWidth="5000.0">
+               <center>
+                  <AnchorPane BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <Label minWidth="100.0" prefWidth="150.0" text="ID" />
+                                    <TextField id="txtID" fx:id="txtID" disable="true" prefHeight="40.0" prefWidth="250.0" />
+                                    <Label fx:id="lblErrorID" alignment="CENTER" contentDisplay="CENTER" minWidth="200.0" prefWidth="250.0" textAlignment="CENTER" textFill="RED">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <Label minWidth="100.0" prefWidth="150.0" text="Name" />
+                                    <TextField id="txtName" fx:id="txtName" disable="true" prefHeight="40.0" prefWidth="250.0" />
+                                    <Label fx:id="lblErrorName" alignment="CENTER" contentDisplay="CENTER" minWidth="200.0" prefWidth="250.0" textAlignment="CENTER" textFill="RED">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <Label minWidth="100.0" prefWidth="150.0" text="Anfangsbestand">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin></Label>
+                                    <TextField id="txtValue" fx:id="txtValue" disable="true" prefHeight="40.0" prefWidth="250.0">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin></TextField>
+                                    <Label fx:id="lblErrorValue" alignment="CENTER" contentDisplay="CENTER" minWidth="200.0" prefWidth="250.0" textAlignment="CENTER" textFill="RED">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <ComboBox fx:id="comType" disable="true" prefWidth="150.0" promptText="Typ">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <CheckBox fx:id="checkMinus" disable="true" mnemonicParsing="false" prefWidth="80.0" text="Minus" />
+                                    <Label fx:id="lblErrorTyp" prefWidth="400.0">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Button id="btnUpdate" fx:id="btnUpdate" alignment="CENTER" contentDisplay="CENTER" disable="true" minHeight="50.0" mnemonicParsing="false" onAction="#update" prefHeight="50.0" prefWidth="300.0" styleClass="btn-default" text="Update" textAlignment="CENTER">
+                                 <VBox.margin>
+                                    <Insets top="25.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Label fx:id="lblError" alignment="CENTER" contentDisplay="CENTER" minWidth="200.0" prefWidth="250.0" textAlignment="CENTER" textFill="RED">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </center>
+               <HBox.margin>
+                  <Insets left="25.0" />
+               </HBox.margin>
+               <top>
+                  <AnchorPane BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Label id="lblTitle" fx:id="lblTitle" text="Kontenplan">
+                                 <font>
+                                    <Font size="36.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </top>
+            </BorderPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

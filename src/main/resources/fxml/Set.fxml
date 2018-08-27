@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="base" prefHeight="605.0" prefWidth="1080.0" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bbbaden.buchungstrainer.controller.SetController">
+   <children>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane>
+               <children>
+                  <Button id="btnBack" fx:id="btnBack" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#back" prefHeight="50.0" prefWidth="200.0" styleClass="btn-cancel" text="Zurück" textAlignment="CENTER" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0" />
+                  <HBox alignment="CENTER" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label id="lblTitle" fx:id="lblTitle" text="Sets" textAlignment="CENTER">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="25.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <HBox>
+               <children>
+                <AnchorPane maxWidth="500.0" prefWidth="5000.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+                           <children>
+                              <AnchorPane>
+                                 <children>
+                                    <Button id="btnCreate" fx:id="btnCreate" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#create" prefHeight="50.0" prefWidth="200.0" styleClass="btn-default" text="Erstellen" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="10.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane>
+                                 <children>
+                                    <Button id="btnImport" fx:id="btnImport" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#setImport" prefHeight="50.0" prefWidth="200.0" styleClass="btn-default" text="Import ..." textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="10.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane>
+                                 <children>
+                                    <Button id="btnOpen" fx:id="btnOpen" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#open" prefHeight="50.0" prefWidth="200.0" styleClass="btn-default" text="Öffnen ..." textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="10.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane>
+                                 <children>
+                                    <Button id="btnAccount" fx:id="btnAccount" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#editAccount" prefHeight="50.0" prefWidth="200.0" styleClass="btn-default" text="Kontenplan ..." textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="10.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane>
+                                 <children>
+                                    <Button id="btnEditSet" fx:id="btnEditSet" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#editSet" prefHeight="50.0" prefWidth="200.0" styleClass="btn-default" text="Bearbeiten ..." textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="10.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane>
+                                 <children>
+                                    <Button id="btnExport" fx:id="btnExport" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#setExport" prefHeight="50.0" prefWidth="200.0" styleClass="btn-default" text="Exportieren ..." textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="10.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane>
+                                 <children>
+                                    <Button id="btnDelete" fx:id="btnDelete" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#delete" prefHeight="50.0" prefWidth="200.0" styleClass="btn-delete" text="Löschen" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="10.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                        <Label fx:id="lblError" textFill="RED" wrapText="true" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane prefWidth="5500.0">
+                     <children>
+                        <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <center>
+                              <AnchorPane BorderPane.alignment="CENTER">
+                                 <children>
+                                    <ListView id="listSets" fx:id="listSets" prefHeight="9000.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

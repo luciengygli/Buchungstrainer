@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="base" prefHeight="710.0" prefWidth="1440.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bbbaden.buchungstrainer.controller.BilanceAndIncomeController">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#cancel" prefHeight="50.0" prefWidth="200.0" styleClass="btn-cancel" stylesheets="@../styles/Styles.css" text="Abbrechen" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="25.0" />
+                  <Label fx:id="lblTitle" alignment="TOP_CENTER" text="Einordnung" textAlignment="CENTER" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="25.0">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="25.0" />
+               </BorderPane.margin>
+            </AnchorPane>
+         </top>
+         <left>
+            <HBox BorderPane.alignment="TOP_CENTER">
+               <BorderPane.margin>
+                  <Insets left="25.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+               <children>
+                  <VBox alignment="TOP_CENTER">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Konten">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="listAccounts" layoutX="10.0" layoutY="45.0" prefHeight="6000.0" />
+                     </children>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label prefWidth="200.0" text="Füllen Sie die Beträge der Konten aus und weisen Sie ihnen eine Kategorie zu." textAlignment="JUSTIFY" wrapText="true">
+                           <VBox.margin>
+                              <Insets bottom="25.0" top="25.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0">
+                           <children>
+                              <Label prefWidth="120.0" text="Konto" textAlignment="CENTER">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="lblAccount" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0">
+                           <children>
+                              <Label prefWidth="120.0" text="Anfangsbestand" textAlignment="CENTER">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="lblAB" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0">
+                           <children>
+                              <Label prefWidth="120.0" text="Wert">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="txtValue" alignment="CENTER_RIGHT" prefWidth="150.0" promptText="0.00">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0">
+                           <children>
+                              <Label prefWidth="120.0" text="Einordnung">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <ComboBox fx:id="comCategorie" prefWidth="150.0" promptText="Typ">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <Button fx:id="btnSave" alignment="CENTER" mnemonicParsing="false" onAction="#saveCategorie" prefHeight="40.0" prefWidth="150.0" styleClass="btn-default" stylesheets="@../styles/Styles.css" text="Speichern" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Label fx:id="lblError" alignment="CENTER" prefHeight="75.0" prefWidth="200.0" textAlignment="CENTER" textFill="RED" wrapText="true">
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </left>
+         <bottom>
+            <Button fx:id="btnCorrect" alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" mnemonicParsing="false" onAction="#correct" prefHeight="50.0" prefWidth="200.0" styleClass="btn-default" stylesheets="@../styles/Styles.css" text="Korrigieren" textAlignment="CENTER" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="25.0" top="25.0" />
+               </BorderPane.margin>
+            </Button>
+         </bottom>
+         <center>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="TOP_CENTER">
+                     <children>
+                        <AnchorPane>
+                           <children>
+                              <Label prefWidth="70.0" text="Aktiven" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="Bilanz" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefWidth="70.0" text="Passiven" textAlignment="RIGHT" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                           </children>
+                        </AnchorPane>
+                        <SplitPane dividerPositions="0.5" prefHeight="5000.0" prefWidth="8000.0">
+                          <items>
+                              <ListView fx:id="listActives" />
+                              <ListView fx:id="listPassives" />
+                          </items>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </SplitPane>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <AnchorPane>
+                           <children>
+                              <Label prefWidth="70.0" text="Aufwände" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="Erfolgsrechnung" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefWidth="70.0" text="Erträge" textAlignment="RIGHT" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                           </children>
+                        </AnchorPane>
+                        <SplitPane dividerPositions="0.5" prefHeight="5000.0" prefWidth="8000.0">
+                          <items>
+                              <ListView fx:id="listEfforts" />
+                              <ListView fx:id="listReturns" />
+                          </items>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </SplitPane>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets right="25.0" top="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

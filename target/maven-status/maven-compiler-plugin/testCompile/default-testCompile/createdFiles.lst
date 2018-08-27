@@ -1,0 +1,12 @@
+ch\bbbaden\buchungstrainer\controller\AccountCreateViewTest.class
+ch\bbbaden\buchungstrainer\set\SolutionTest.class
+ch\bbbaden\buchungstrainer\controller\TaskViewTest.class
+ch\bbbaden\buchungstrainer\controller\ChoiceViewTest.class
+ch\bbbaden\buchungstrainer\controller\RegisterViewTest.class
+ch\bbbaden\buchungstrainer\controller\LoginViewTest.class
+ch\bbbaden\buchungstrainer\dao\converter\SetDocConverterTest.class
+ch\bbbaden\buchungstrainer\controller\SetViewTest.class
+ch\bbbaden\buchungstrainer\user\UserTest.class
+ch\bbbaden\buchungstrainer\dao\LoginDAOTest.class
+ch\bbbaden\buchungstrainer\dao\SetDAOTest.class
+ch\bbbaden\buchungstrainer\util\SettingsTest.class

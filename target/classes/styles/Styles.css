@@ -1,0 +1,66 @@
+.button {
+    -fx-font-weight: bold;
+}
+
+#btn-teacher {
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url(../images/Teacher.png);
+    
+}
+
+#btn-student {
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url(../images/Student.png);
+}
+
+.link {
+    -fx-text-fill: #0077CC;    
+}
+
+.link:hover {
+    -fx-text-fill: #0099FF;
+}
+
+.btn-default {
+    -fx-background-color: #00CC00;
+    -fx-text-fill: #FFFFFF;
+}
+
+.btn-default:hover {
+    -fx-background-color: #00DD00;
+}
+
+.btn-cancel {
+    -fx-background-color: #CCCCCC;
+}
+
+.btn-cancel:hover {
+    -fx-background-color: #DDDDDD;
+}
+
+.btn-delete {
+    -fx-background-color: #EE0000;
+    -fx-text-fill: #FFFFFF;
+}
+
+.btn-delete:hover {
+    -fx-background-color: #FE0000;
+}
+
+.list-cell:used {
+    -fx-background-color: #9999FF;
+}
+
+.list-cell:right {
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #00CC00;
+}
+
+.list-cell:wrong {
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #EE0000;
+}
